@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "401772856558",
+    "project_id": "canvas-d989f",
+    "storage_bucket": "canvas-d989f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401772856558:android:5d53f665ebfbbab9e6dfff",
+        "android_client_info": {
+          "package_name": "com.arsen.canvas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDubAsMZKp8YY_c-hywdRV8SxypcEW4OGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
