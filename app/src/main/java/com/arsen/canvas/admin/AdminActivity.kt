@@ -1,39 +1,38 @@
 package com.arsen.canvas.admin
+
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.arsen.canvas.R
-import com.arsen.canvas.models.Course
-import com.arsen.canvas.data.LocalDatabase
 
 class AdminActivity : AppCompatActivity() {
 
-    private var courseIdCounter = 1
+    private lateinit var btnManageStudents: Button
+    private lateinit var btnManageTeachers: Button
+    private lateinit var btnViewCourses: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin)
 
-        val etCourseTitle = findViewById<EditText>(R.id.etCourseTitle)
-        val etCourseDescription = findViewById<EditText>(R.id.etCourseDescription)
-        val btnCreateCourse = findViewById<Button>(R.id.btnCreateCourse)
+        btnManageStudents = findViewById(R.id.btnManageStudents)
+        btnManageTeachers = findViewById(R.id.btnManageTeachers)
+        btnViewCourses = findViewById(R.id.btnViewCourses)
 
-        btnCreateCourse.setOnClickListener {
-            val title = etCourseTitle.text.toString().trim()
-            val description = etCourseDescription.text.toString().trim()
+        btnManageStudents.setOnClickListener {
+            val intent = Intent(this, ManageStudentsActivity::class.java)
+            startActivity(intent)
+        }
 
-            if (title.isNotEmpty() && description.isNotEmpty()) {
-                // Здесь для простоты teacherId = 0, так как назначение учителя не реализовано
-                val newCourse = Course(courseIdCounter++, title, description, teacherId = 0)
-                LocalDatabase.addCourse(newCourse)
-                Toast.makeText(this, "Курс создан", Toast.LENGTH_SHORT).show()
-                etCourseTitle.text.clear()
-                etCourseDescription.text.clear()
-            } else {
-                Toast.makeText(this, "Заполните все поля", Toast.LENGTH_SHORT).show()
-            }
+        btnManageTeachers.setOnClickListener {
+            val intent = Intent(this, ManageTeachersActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnViewCourses.setOnClickListener {
+            val intent = Intent(this, ViewCoursesActivity::class.java)
+            startActivity(intent)
         }
     }
 }

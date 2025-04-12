@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btnManageStudents"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:text="Управление студентами"
+        android:layout_marginBottom="16dp"/>
 
-        <EditText
-            android:id="@+id/etCourseTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Название курса" />
+    <Button
+        android:id="@+id/btnManageTeachers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Управление преподавателями"
+        android:layout_marginBottom="16dp"/>
 
-        <EditText
-            android:id="@+id/etCourseDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Описание курса"
-            android:layout_marginTop="16dp" />
+    <Button
+        android:id="@+id/btnViewCourses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Просмотр курсов"/>
 
-        <Button
-            android:id="@+id/btnCreateCourse"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Создать курс"
-            android:layout_marginTop="16dp" />
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>

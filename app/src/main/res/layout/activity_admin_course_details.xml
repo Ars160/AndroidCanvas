@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/courseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Course Title" />
+
+    <TextView
+        android:id="@+id/teacherNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Учитель не назначен"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnAssignTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Назначить учителя"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnRemoveTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Убрать учителя"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/listViewStudents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:padding="16dp"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

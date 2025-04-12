@@ -5,10 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/courseTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Название курса"
+        android:textSize="20sp"
+        android:paddingBottom="16dp" />
+
     <ListView
-        android:id="@+id/listViewCourses"
+        android:id="@+id/listViewAssignments"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
-
 </LinearLayout>
